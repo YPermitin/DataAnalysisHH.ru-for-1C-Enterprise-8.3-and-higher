@@ -1,0 +1,1564 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetObject">
+			<name>ДанныеПоВакансиям</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Заголовок</dataPath>
+				<field>Заголовок</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Заголовок</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>255</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+				<appearance>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xsi:type="dcsset:SettingsParameterValue">
+						<parameter>МинимальнаяШирина</parameter>
+						<value xsi:type="xs:decimal">15</value>
+					</item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Обязанности</dataPath>
+				<field>Обязанности</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Обязанности</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>0</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldFolder">
+				<dataPath>Вакансии</dataPath>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.URL</dataPath>
+				<field>URL</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.URL</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>0</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Требование</dataPath>
+				<field>Требование</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Требование</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>0</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Местоположение.МестоположениеИмя</dataPath>
+				<field>МестоположениеИмя</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Местоположение.Имя</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>255</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Местоположение.МестоположениеUrl</dataPath>
+				<field>МестоположениеUrl</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Местоположение.URL</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>0</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Местоположение.МестоположениеID</dataPath>
+				<field>МестоположениеID</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Местоположение.ID</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>0</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Премиум</dataPath>
+				<field>Премиум</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Премиум</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:boolean</Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Зарплата.ЗарплатаВалюта</dataPath>
+				<field>ЗарплатаВалюта</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Зарплата.Валюта</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>5</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Зарплата.ЗарплатаОт</dataPath>
+				<field>ЗарплатаОт</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Зарплата.От</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Зарплата.ЗарплатаДо</dataPath>
+				<field>ЗарплатаДо</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Зарплата.До</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldFolder">
+				<dataPath>Вакансии.Зарплата</dataPath>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Зарплата</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldFolder">
+				<dataPath>Вакансии.Местоположение</dataPath>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Местоположение</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Адрес</dataPath>
+				<field>Адрес</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Адрес</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>0</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.ДатаСоздания</dataPath>
+				<field>ДатаСоздания</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Дата создания</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+					<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<DateFractions>DateTime</DateFractions>
+					</DateQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.ДатаПубликации</dataPath>
+				<field>ДатаПубликации</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Дата публикации</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+					<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<DateFractions>DateTime</DateFractions>
+					</DateQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.ID</dataPath>
+				<field>ID</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.ID</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>150</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.ВАрхиве</dataPath>
+				<field>ВАрхиве</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.В архиве</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:boolean</Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldFolder">
+				<dataPath>Вакансии.ТипВакансии</dataPath>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Тип вакансии</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.ТипВакансии.ТипВакансииИмя</dataPath>
+				<field>ТипВакансииИмя</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Тип вакансии.Имя</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>255</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.ТипВакансии.ТипВакансииID</dataPath>
+				<field>ТипВакансииID</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Тип вакансии.ID</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>50</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldFolder">
+				<dataPath>Вакансии.Работодатель</dataPath>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Работодатель</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Работодатель.РаботодательВакансииURL</dataPath>
+				<field>РаботодательВакансииURL</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Работодатель.Все вакансии (URL)</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>0</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Работодатель.URL</dataPath>
+				<field>РаботодательURL</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Работодатель.URL</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>0</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Работодатель.РаботодательИмя</dataPath>
+				<field>РаботодательИмя</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Работодатель.Имя</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>64</Digits>
+						<FractionDigits>0</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Работодатель.РаботодательID</dataPath>
+				<field>РаботодательID</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Работодатель.ID</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>255</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Работодатель.Лого</dataPath>
+				<field>РаботодательЛого</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Работодатель.Лого</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>0</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Работодатель.Лого_90</dataPath>
+				<field>РаботодательЛого90</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Работодатель.Лого (90)</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>0</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Работодатель.Лого_240</dataPath>
+				<field>РаботодательЛого240</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Работодатель.Лого (240)</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>0</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Местоположение.Подробнее.Регион_1</dataPath>
+				<field>Регион_1</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Местоположение.Подробнее.Регион (ур.1)</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+				<presentationExpression>Вакансии.Местоположение.Подробнее.РегионИмя_1</presentationExpression>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>0</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Местоположение.Подробнее.Регион_2</dataPath>
+				<field>Регион_2</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Местоположение.Подробнее.Регион (ур.2)</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+				<presentationExpression>Вакансии.Местоположение.Подробнее.РегионИмя_2</presentationExpression>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>0</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Местоположение.Подробнее.Регион_3</dataPath>
+				<field>Регион_3</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Местоположение.Подробнее.Регион (ур.3)</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+				<presentationExpression>Вакансии.Местоположение.Подробнее.РегионИмя_3</presentationExpression>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>0</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Местоположение.Подробнее.РегионИмя_1</dataPath>
+				<field>РегионИмя_1</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Местоположение.Подробнее.Имя региона (ур.1)</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>0</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Местоположение.Подробнее.РегионИмя_2</dataPath>
+				<field>РегионИмя_2</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Местоположение.Подробнее.Имя региона (ур.2)</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>0</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Вакансии.Местоположение.Подробнее.РегионИмя_3</dataPath>
+				<field>РегионИмя_3</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Вакансии.Местоположение.Подробнее.Имя региона (ур.3)</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<condition>true</condition>
+				</useRestriction>
+				<attributeUseRestriction>
+					<condition>true</condition>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>0</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<objectName>ДанныеПоВакансиям</objectName>
+		</dataSet>
+		<dataSet xsi:type="DataSetObject">
+			<name>КурсыВалют</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КурсыВалют.Имя</dataPath>
+				<field>Имя</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Курсы валют.Имя</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>150</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КурсыВалют.Номинал</dataPath>
+				<field>Номинал</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Курсы валют.Номинал</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>3</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КурсыВалют.Курс</dataPath>
+				<field>Курс</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Курсы валют.Курс</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>3</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КурсыВалют.Код</dataPath>
+				<field>Код</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Курсы валют.Код</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>5</Digits>
+						<FractionDigits>0</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КурсыВалют.СимвольныйКод</dataPath>
+				<field>СимвольныйКод</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Курсы валют.Символьный код</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>5</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldFolder">
+				<dataPath>КурсыВалют</dataPath>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Курсы валют</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<objectName>КурсыВалют</objectName>
+		</dataSet>
+		<dataSet xsi:type="DataSetObject">
+			<name>Регионы</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регионы.Имя</dataPath>
+				<field>Имя</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Регионы.Имя</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>255</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регионы.ID</dataPath>
+				<field>ID</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Регионы.ID</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>0</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регионы.РодительID</dataPath>
+				<field>РодительID</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Регионы.Родитель ID</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>0</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldFolder">
+				<dataPath>Регионы</dataPath>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Регионы</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<objectName>Регионы</objectName>
+		</dataSet>
+		<dataSetLink>
+			<sourceDataSet>ДанныеПоВакансиям</sourceDataSet>
+			<destinationDataSet>КурсыВалют</destinationDataSet>
+			<sourceExpression>Вакансии.Зарплата.ЗарплатаВалюта</sourceExpression>
+			<destinationExpression>КурсыВалют.СимвольныйКод</destinationExpression>
+		</dataSetLink>
+		<calculatedField>
+			<dataPath>Вакансии.Зарплата.ЗарплатаОтРуб</dataPath>
+			<expression>Выбор Когда КурсыВалют.Номинал &gt; 0 Тогда Вакансии.Зарплата.ЗарплатаОт * КурсыВалют.Курс / КурсыВалют.Номинал Иначе 0 Конец</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>От (руб.)</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+				<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Digits>15</Digits>
+					<FractionDigits>2</FractionDigits>
+					<AllowedSign>Any</AllowedSign>
+				</NumberQualifiers>
+			</valueType>
+		</calculatedField>
+		<calculatedField>
+			<dataPath>Вакансии.Зарплата.ЗарплатаДоРуб</dataPath>
+			<expression>Выбор Когда КурсыВалют.Номинал &gt; 0 Тогда Вакансии.Зарплата.ЗарплатаДо * КурсыВалют.Курс / КурсыВалют.Номинал Иначе 0 Конец</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>До (руб.)</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+				<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Digits>15</Digits>
+					<FractionDigits>2</FractionDigits>
+					<AllowedSign>Any</AllowedSign>
+				</NumberQualifiers>
+			</valueType>
+		</calculatedField>
+		<calculatedField>
+			<dataPath>Вакансии.Зарплата.СредняяРуб</dataPath>
+			<expression>Выбор 
+	Когда ЗначениеЗаполнено(Вакансии.Зарплата.ЗарплатаОт) И ЗначениеЗаполнено(Вакансии.Зарплата.ЗарплатаДо) 
+	Тогда ((Выбор Когда КурсыВалют.Номинал &gt; 0 Тогда Вакансии.Зарплата.ЗарплатаОт * КурсыВалют.Курс / КурсыВалют.Номинал Иначе 0 Конец) + (Выбор Когда КурсыВалют.Номинал &gt; 0 Тогда Вакансии.Зарплата.ЗарплатаДо * КурсыВалют.Курс / КурсыВалют.Номинал Иначе 0 Конец) ) / 2
+	Когда ЗначениеЗаполнено(Вакансии.Зарплата.ЗарплатаОт) И НЕ ЗначениеЗаполнено(Вакансии.Зарплата.ЗарплатаДо)
+	Тогда (Выбор Когда КурсыВалют.Номинал &gt; 0 Тогда Вакансии.Зарплата.ЗарплатаОт * КурсыВалют.Курс / КурсыВалют.Номинал Иначе 0 Конец)
+	Когда НЕ ЗначениеЗаполнено(Вакансии.Зарплата.ЗарплатаОт) И ЗначениеЗаполнено(Вакансии.Зарплата.ЗарплатаОт)
+	Тогда (Выбор Когда КурсыВалют.Номинал &gt; 0 Тогда Вакансии.Зарплата.ЗарплатаДо * КурсыВалют.Курс / КурсыВалют.Номинал Иначе 0 Конец)
+	Иначе NULL 
+Конец</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Средняя (руб.)</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+				<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Digits>15</Digits>
+					<FractionDigits>2</FractionDigits>
+					<AllowedSign>Any</AllowedSign>
+				</NumberQualifiers>
+			</valueType>
+		</calculatedField>
+		<totalField>
+			<dataPath>Вакансии.Зарплата.СредняяРуб</dataPath>
+			<expression>Среднее(Вакансии.Зарплата.СредняяРуб)</expression>
+		</totalField>
+		<parameter>
+			<name>ПоискВакансий</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Поиск вакансий</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+				<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Length>0</Length>
+					<AllowedLength>Variable</AllowedLength>
+				</StringQualifiers>
+			</valueType>
+			<value xsi:type="xs:string"/>
+			<useRestriction>false</useRestriction>
+			<use>Always</use>
+		</parameter>
+		<parameter>
+			<name>ВалютаРубль</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Валюта рубль</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+				<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Length>0</Length>
+					<AllowedLength>Variable</AllowedLength>
+				</StringQualifiers>
+			</valueType>
+			<value xsi:type="xs:string">RUR</value>
+			<useRestriction>true</useRestriction>
+			<use>Always</use>
+		</parameter>
+		<parameter>
+			<name>ВыводитьЛоготип</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Выводить логотип</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:boolean</Type>
+			</valueType>
+			<value xsi:type="xs:boolean">false</value>
+			<useRestriction>false</useRestriction>
+			<use>Always</use>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">АнализДанныхHHRU</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Анализ данных "HeadHunter.ru"</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>СистемныеПоля.НомерПоПорядкуВГруппировке</field>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<field>Вакансии</field>
+			<item xsi:type="SelectedItemFolder">
+				<use>false</use>
+				<title>Местоположение вакансии</title>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Местоположение.МестоположениеID</field>
+					<title>ID</title>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Местоположение.МестоположениеИмя</field>
+					<title>Имя</title>
+				</item>
+				<placement>Vertically</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Название</v8:content>
+					</v8:item>
+				</lwsTitle>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Заголовок</field>
+					<title>Заголовок</title>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.ID</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На сайте</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<placement>Vertically</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<title>Зарплата</title>
+				<item xsi:type="SelectedItemFolder">
+					<title>В рублях</title>
+					<item xsi:type="SelectedItemField">
+						<field>ПараметрыДанных.ВалютаРубль</field>
+						<title>Валюта</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.Зарплата.ЗарплатаОтРуб</field>
+						<title>От</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.Зарплата.ЗарплатаДоРуб</field>
+						<title>До</title>
+					</item>
+					<placement>Vertically</placement>
+				</item>
+				<item xsi:type="SelectedItemFolder">
+					<title>В валюте вакансии</title>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.Зарплата.ЗарплатаВалюта</field>
+						<title>Валюта</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.Зарплата.ЗарплатаОт</field>
+						<title>От</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.Зарплата.ЗарплатаДо</field>
+						<title>До</title>
+					</item>
+					<placement>Vertically</placement>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Зарплата.СредняяРуб</field>
+					<title>Средняя (руб.)</title>
+				</item>
+				<placement>Horizontally</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<title>Подробнее</title>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Обязанности</field>
+					<title>Обязанности</title>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Требование</field>
+					<title>Требование</title>
+				</item>
+				<placement>Horizontally</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<title>Работодатель</title>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Работодатель.РаботодательИмя</field>
+					<title>Имя</title>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Адрес</field>
+					<title>Адрес</title>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Работодатель.РаботодательID</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На сайте</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<placement>Vertically</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<title>Дополнительная информация</title>
+				<item xsi:type="SelectedItemFolder">
+					<title>История</title>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.ДатаПубликации</field>
+						<title>Дата публикации</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.ДатаСоздания</field>
+						<title>Дата создания</title>
+					</item>
+					<placement>Vertically</placement>
+				</item>
+				<item xsi:type="SelectedItemFolder">
+					<title>Состояние</title>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.ВАрхиве</field>
+						<title>В архиве</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.Премиум</field>
+						<title>Премиум</title>
+					</item>
+					<placement>Vertically</placement>
+				</item>
+				<item xsi:type="SelectedItemFolder">
+					<use>false</use>
+					<title>Тип вакансии</title>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.ТипВакансии.ТипВакансииID</field>
+						<title>ID</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.ТипВакансии.ТипВакансииИмя</field>
+						<title>Имя</title>
+					</item>
+					<placement>Vertically</placement>
+				</item>
+				<placement>Horizontally</placement>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<use>false</use>
+			<field>Вакансии.Местоположение.Подробнее.Регион_1</field>
+			<title>Регион</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<use>false</use>
+			<field>Вакансии.Местоположение.Подробнее.Регион_2</field>
+			<title> </title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<use>false</use>
+			<field>Вакансии.Местоположение.Подробнее.Регион_3</field>
+			<title> </title>
+		</item>
+	</selection>
+	<filter>
+		<userSettingID>3917b2ac-9b0b-4edb-9142-ae1c8c876ecd</userSettingID>
+	</filter>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ПоискВакансий</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string"/>
+			<userSettingID>0f55249e-7bf8-4737-bace-a916f28dc894</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>ВалютаРубль</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string">"RUR"</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьЛоготип</dcscor:parameter>
+			<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			<userSettingID>00d47710-b215-4872-9573-1a341059a942</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>Вакансии.Зарплата.СредняяРуб</field>
+			<orderType>Desc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Вакансии.Местоположение.Подробнее.РегионИмя_1</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Вакансии.Местоположение.Подробнее.РегионИмя_2</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Вакансии.Местоположение.Подробнее.РегионИмя_3</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<conditionalAppearance>
+		<item>
+			<selection>
+				<item>
+					<field>Вакансии.Заголовок</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="xs:string">Узкие поля</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Вакансии.Обязанности</field>
+				</item>
+				<item>
+					<field>Вакансии.Требование</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">35</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="xs:string">Широкие поля</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаДо</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаОт</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаДоРуб</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаОтРуб</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.СредняяРуб</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ='15'; ЧДЦ='2'; ЧН='0.00'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="xs:string">Числовые поля (со значениями)</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Вакансии.ID</field>
+				</item>
+				<item>
+					<field>Вакансии.Работодатель.РаботодательID</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">web:DodgerBlue</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Шрифт</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Текст</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;перейти&gt;</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылки для перехода</v8:content>
+				</v8:item>
+			</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаВалюта</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Вакансии.Зарплата.ЗарплатаВалюта</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Текст</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;не указана&gt;</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пустая валюта</v8:content>
+				</v8:item>
+			</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>ПараметрыДанных.ВалютаРубль</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Текст</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>RUR</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта Рубль</v8:content>
+				</v8:item>
+			</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаДоРуб</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаОтРуб</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.СредняяРуб</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаВалюта</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаДо</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаОт</field>
+				</item>
+				<item>
+					<field>ПараметрыДанных.ВалютаРубль</field>
+				</item>
+				<item>
+					<field>Вакансии.Заголовок</field>
+				</item>
+				<item>
+					<field>Вакансии.Работодатель.РаботодательИмя</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Шрифт</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделенные поля</v8:content>
+				</v8:item>
+			</presentation>
+		</item>
+	</conditionalAppearance>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionGroupFieldsPlacement">Together</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>Вакансии.Местоположение.Подробнее.Регион_1</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<item xsi:type="StructureItemGroup">
+			<groupItems>
+				<item xsi:type="GroupItemField">
+					<field>Вакансии.Местоположение.Подробнее.Регион_2</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+			<item xsi:type="StructureItemGroup">
+				<groupItems>
+					<item xsi:type="GroupItemField">
+						<field>Вакансии.Местоположение.Подробнее.Регион_3</field>
+						<groupType>Items</groupType>
+						<periodAdditionType>None</periodAdditionType>
+						<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+						<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+					</item>
+				</groupItems>
+				<order>
+					<item xsi:type="OrderItemAuto"/>
+				</order>
+				<selection>
+					<item xsi:type="SelectedItemAuto"/>
+				</selection>
+				<item xsi:type="StructureItemGroup">
+					<order>
+						<item xsi:type="OrderItemAuto"/>
+					</order>
+					<selection>
+						<item xsi:type="SelectedItemAuto"/>
+					</selection>
+				</item>
+			</item>
+		</item>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>
