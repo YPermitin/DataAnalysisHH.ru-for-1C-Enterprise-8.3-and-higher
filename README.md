@@ -1,2 +1,4 @@
-# Data-Analysis-HH.ru-for-1C-Enterprise-8.3
+# Анализ данных HH.ru
 Отчет для анализа вакансий ресурса HeadHunter (hh.ru). Является дополнением к приложению "Анализ данных HH.ru" (ALM.DEVELPLATFORM.RU).
+
+Подробнее здесь: http://infostart.ru/public/517835/
