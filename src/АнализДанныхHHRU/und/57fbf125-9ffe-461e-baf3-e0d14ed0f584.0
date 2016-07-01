@@ -1368,7 +1368,7 @@
 &НаКлиенте
 Процедура ОбратнаяСвязь(Команда)
 	
-	ЗапуститьПриложение(""http://develplatform.ru/About-us/Contact-us"");
+	ЗапуститьПриложение(""http://develplatform.ru/About-us/Contact-us?messageSubject=1С:Анализ%20данных%20HH.ru%20(отчет)"");
 	
 КонецПроцедуры
 
