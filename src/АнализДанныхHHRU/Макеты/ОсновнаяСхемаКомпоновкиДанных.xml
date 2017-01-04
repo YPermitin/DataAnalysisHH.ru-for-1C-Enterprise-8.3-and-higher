@@ -1498,6 +1498,10 @@
 			<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
 			<dcscor:value xsi:type="DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
 		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ФиксацияСверху</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionFixation">DontUse</dcscor:value>
+		</dcscor:item>
 	</outputParameters>
 	<item xsi:type="StructureItemGroup">
 		<groupItems>
