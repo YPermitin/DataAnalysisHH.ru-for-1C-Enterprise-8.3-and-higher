@@ -1065,6 +1065,29 @@
 	</dataCompositionSchema>
 </SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
 <Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<userFields>
+		<item xsi:type="UserFieldExpression">
+			<dataPath>ПользовательскиеПоля.Поле1</dataPath>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЧетнаяСтрока</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<detailExpression>Выбор
+	Когда СистемныеПоля.НомерПоПорядку / 2 = Цел(СистемныеПоля.НомерПоПорядку / 2)
+		Тогда Истина
+	Иначе Ложь
+Конец</detailExpression>
+			<detailExpressionPresentation>Выбор
+	Когда [№ п/п] / 2 = Цел([№ п/п] / 2)
+		Тогда Истина
+	Иначе Ложь
+Конец</detailExpressionPresentation>
+			<totalExpression/>
+			<totalExpressionPresentation/>
+		</item>
+	</userFields>
 	<selection>
 		<item xsi:type="SelectedItemField">
 			<field>СистемныеПоля.НомерПоПорядкуВГруппировке</field>
@@ -1487,6 +1510,55 @@
 					<v8:content>Выделенные поля</v8:content>
 				</v8:item>
 			</presentation>
+		</item>
+		<item>
+			<selection/>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:ReportHeaderBackColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInGroup>DontUse</useInGroup>
+			<useInHierarchicalGroup>DontUse</useInHierarchicalGroup>
+			<useInHeader>DontUse</useInHeader>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
+		</item>
+		<item>
+			<selection/>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>СтильГраницы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Line" width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
+		</item>
+		<item>
+			<selection/>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ПользовательскиеПоля.Поле1</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">true</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:ReportGroup2BackColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInOverall>DontUse</useInOverall>
+			<useInFieldsHeader>DontUse</useInFieldsHeader>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
 		</item>
 	</conditionalAppearance>
 	<outputParameters>
