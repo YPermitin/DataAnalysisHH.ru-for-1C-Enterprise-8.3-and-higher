@@ -1599,8 +1599,7 @@
 		</dcscor:item>
 		<dcscor:item xsi:type="SettingsParameterValue">
 			<dcscor:parameter>ВыводитьЛоготип</dcscor:parameter>
-			<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
-			<userSettingID>00d47710-b215-4872-9573-1a341059a942</userSettingID>
+			<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
 		</dcscor:item>
 	</dataParameters>
 	<order>
@@ -2230,8 +2229,7 @@
 		</dcscor:item>
 		<dcscor:item xsi:type="SettingsParameterValue">
 			<dcscor:parameter>ВыводитьЛоготип</dcscor:parameter>
-			<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
-			<userSettingID>00d47710-b215-4872-9573-1a341059a942</userSettingID>
+			<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
 		</dcscor:item>
 	</dataParameters>
 	<order>
