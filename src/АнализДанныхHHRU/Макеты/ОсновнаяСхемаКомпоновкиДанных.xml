@@ -1306,6 +1306,25 @@
 			<useRestriction>false</useRestriction>
 			<use>Always</use>
 		</parameter>
+		<parameter>
+			<name>ТокенДоступа</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Токен доступа</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+				<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Length>0</Length>
+					<AllowedLength>Variable</AllowedLength>
+				</StringQualifiers>
+			</valueType>
+			<value xsi:type="xs:string"/>
+			<useRestriction>false</useRestriction>
+			<use>Always</use>
+		</parameter>
 		<settingsVariant>
 			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">АнализДанныхHHRU</name>
 			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
@@ -1321,6 +1340,15 @@
 				<d4p1:item>
 					<d4p1:lang>ru</d4p1:lang>
 					<d4p1:content>Анализ данных "HeadHunter.ru" (расширенный)</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">АнализДанныхHHRU_РассылкаОтчета</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Анализ данных "HeadHunter.ru" (расширенный для рассылки)</d4p1:content>
 				</d4p1:item>
 			</presentation>
 		</settingsVariant>
@@ -1600,6 +1628,10 @@
 		<dcscor:item xsi:type="SettingsParameterValue">
 			<dcscor:parameter>ВыводитьЛоготип</dcscor:parameter>
 			<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ТокенДоступа</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string"/>
 		</dcscor:item>
 	</dataParameters>
 	<order>
@@ -2230,6 +2262,680 @@
 		<dcscor:item xsi:type="SettingsParameterValue">
 			<dcscor:parameter>ВыводитьЛоготип</dcscor:parameter>
 			<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ТокенДоступа</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string"/>
+			<viewMode>Normal</viewMode>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>Вакансии.Зарплата.СредняяРуб</field>
+			<orderType>Desc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Вакансии.Местоположение.Подробнее.РегионИмя_1</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Вакансии.Местоположение.Подробнее.РегионИмя_2</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Вакансии.Местоположение.Подробнее.РегионИмя_3</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<conditionalAppearance>
+		<item>
+			<selection>
+				<item>
+					<field>Вакансии.Заголовок</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="xs:string">Узкие поля</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Вакансии.Обязанности</field>
+				</item>
+				<item>
+					<field>Вакансии.Требование</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">35</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="xs:string">Широкие поля</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаДо</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаОт</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаДоРуб</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаОтРуб</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.СредняяРуб</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ='15'; ЧДЦ='2'; ЧН='0.00'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="xs:string">Числовые поля (со значениями)</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Вакансии.ID</field>
+				</item>
+				<item>
+					<field>Вакансии.Работодатель.РаботодательID</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">web:DodgerBlue</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Шрифт</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Текст</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;перейти&gt;</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылки для перехода</v8:content>
+				</v8:item>
+			</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаВалюта</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Вакансии.Зарплата.ЗарплатаВалюта</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Right</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Текст</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;не указана&gt;</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пустая валюта</v8:content>
+				</v8:item>
+			</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>ПараметрыДанных.ВалютаРубль</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Текст</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>RUR</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта Рубль</v8:content>
+				</v8:item>
+			</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаДоРуб</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаОтРуб</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.СредняяРуб</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаВалюта</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаДо</field>
+				</item>
+				<item>
+					<field>Вакансии.Зарплата.ЗарплатаОт</field>
+				</item>
+				<item>
+					<field>ПараметрыДанных.ВалютаРубль</field>
+				</item>
+				<item>
+					<field>Вакансии.Заголовок</field>
+				</item>
+				<item>
+					<field>Вакансии.Работодатель.РаботодательИмя</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Шрифт</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделенные поля</v8:content>
+				</v8:item>
+			</presentation>
+		</item>
+		<item>
+			<selection/>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:ReportHeaderBackColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInGroup>DontUse</useInGroup>
+			<useInHierarchicalGroup>DontUse</useInHierarchicalGroup>
+			<useInHeader>DontUse</useInHeader>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
+		</item>
+		<item>
+			<selection/>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>СтильГраницы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Line" width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
+		</item>
+		<item>
+			<selection/>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ПользовательскиеПоля.Поле1</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">true</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:ReportGroup2BackColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInOverall>DontUse</useInOverall>
+			<useInFieldsHeader>DontUse</useInFieldsHeader>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
+		</item>
+	</conditionalAppearance>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionGroupFieldsPlacement">Together</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ФиксацияСверху</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionFixation">DontUse</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>Вакансии.ТипЗанятости.Имя</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<item xsi:type="StructureItemGroup">
+			<groupItems>
+				<item xsi:type="GroupItemField">
+					<field>Вакансии.ГрафикРаботы.Имя</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+			<item xsi:type="StructureItemGroup">
+				<groupItems>
+					<item xsi:type="GroupItemField">
+						<field>Вакансии.Местоположение.Подробнее.Регион_1</field>
+						<groupType>Items</groupType>
+						<periodAdditionType>None</periodAdditionType>
+						<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+						<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+					</item>
+				</groupItems>
+				<order>
+					<item xsi:type="OrderItemAuto"/>
+				</order>
+				<selection>
+					<item xsi:type="SelectedItemAuto"/>
+				</selection>
+				<item xsi:type="StructureItemGroup">
+					<groupItems>
+						<item xsi:type="GroupItemField">
+							<field>Вакансии.Местоположение.Подробнее.Регион_2</field>
+							<groupType>Items</groupType>
+							<periodAdditionType>None</periodAdditionType>
+							<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+							<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+						</item>
+					</groupItems>
+					<order>
+						<item xsi:type="OrderItemAuto"/>
+					</order>
+					<selection>
+						<item xsi:type="SelectedItemAuto"/>
+					</selection>
+					<item xsi:type="StructureItemGroup">
+						<groupItems>
+							<item xsi:type="GroupItemField">
+								<field>Вакансии.Местоположение.Подробнее.Регион_3</field>
+								<groupType>Items</groupType>
+								<periodAdditionType>None</periodAdditionType>
+								<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+								<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+							</item>
+						</groupItems>
+						<order>
+							<item xsi:type="OrderItemAuto"/>
+						</order>
+						<selection>
+							<item xsi:type="SelectedItemAuto"/>
+						</selection>
+						<item xsi:type="StructureItemGroup">
+							<order>
+								<item xsi:type="OrderItemAuto"/>
+							</order>
+							<selection>
+								<item xsi:type="SelectedItemAuto"/>
+							</selection>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<userFields>
+		<item xsi:type="UserFieldExpression">
+			<dataPath>ПользовательскиеПоля.Поле1</dataPath>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЧетнаяСтрока</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<detailExpression>Выбор
+	Когда СистемныеПоля.НомерПоПорядку / 2 = Цел(СистемныеПоля.НомерПоПорядку / 2)
+		Тогда Истина
+	Иначе Ложь
+Конец</detailExpression>
+			<detailExpressionPresentation>Выбор
+	Когда [№ п/п] / 2 = Цел([№ п/п] / 2)
+		Тогда Истина
+	Иначе Ложь
+Конец</detailExpressionPresentation>
+			<totalExpression/>
+			<totalExpressionPresentation/>
+		</item>
+	</userFields>
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>СистемныеПоля.НомерПоПорядкуВГруппировке</field>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<field>Вакансии</field>
+			<item xsi:type="SelectedItemFolder">
+				<use>false</use>
+				<title>Местоположение вакансии</title>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Местоположение.МестоположениеID</field>
+					<title>ID</title>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Местоположение.МестоположениеИмя</field>
+					<title>Имя</title>
+				</item>
+				<placement>Vertically</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Название</v8:content>
+					</v8:item>
+				</lwsTitle>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Заголовок</field>
+					<title>Заголовок</title>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.ID</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На сайте</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<placement>Vertically</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<title>Зарплата</title>
+				<item xsi:type="SelectedItemFolder">
+					<title>В рублях</title>
+					<item xsi:type="SelectedItemField">
+						<field>ПараметрыДанных.ВалютаРубль</field>
+						<title>Валюта</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.Зарплата.ЗарплатаОтРуб</field>
+						<title>От</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.Зарплата.ЗарплатаДоРуб</field>
+						<title>До</title>
+					</item>
+					<placement>Vertically</placement>
+				</item>
+				<item xsi:type="SelectedItemFolder">
+					<title>В валюте вакансии</title>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.Зарплата.ЗарплатаВалюта</field>
+						<title>Валюта</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.Зарплата.ЗарплатаОт</field>
+						<title>От</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.Зарплата.ЗарплатаДо</field>
+						<title>До</title>
+					</item>
+					<placement>Vertically</placement>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Зарплата.СредняяРуб</field>
+					<title>Средняя (руб.)</title>
+				</item>
+				<placement>Horizontally</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<title>Подробнее</title>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Обязанности</field>
+					<title>Обязанности</title>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Требование</field>
+					<title>Требование</title>
+				</item>
+				<placement>Horizontally</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<title>Работодатель</title>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Работодатель.РаботодательИмя</field>
+					<title>Имя</title>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Адрес</field>
+					<title>Адрес</title>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<field>Вакансии.Работодатель.РаботодательID</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На сайте</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<placement>Vertically</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<title>Дополнительная информация</title>
+				<item xsi:type="SelectedItemFolder">
+					<title>История</title>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.ДатаПубликации</field>
+						<title>Дата публикации</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.ДатаСоздания</field>
+						<title>Дата создания</title>
+					</item>
+					<placement>Vertically</placement>
+				</item>
+				<item xsi:type="SelectedItemFolder">
+					<title>Состояние</title>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.ВАрхиве</field>
+						<title>В архиве</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.Премиум</field>
+						<title>Премиум</title>
+					</item>
+					<placement>Vertically</placement>
+				</item>
+				<item xsi:type="SelectedItemFolder">
+					<use>false</use>
+					<title>Тип вакансии</title>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.ТипВакансии.ТипВакансииID</field>
+						<title>ID</title>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Вакансии.ТипВакансии.ТипВакансииИмя</field>
+						<title>Имя</title>
+					</item>
+					<placement>Vertically</placement>
+				</item>
+				<placement>Horizontally</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<use>false</use>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тип занятости</v8:content>
+					</v8:item>
+				</lwsTitle>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>Вакансии.ТипЗанятости.Имя</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ID</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>Вакансии.ТипЗанятости.ID</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<placement>Auto</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<use>false</use>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>График работы</v8:content>
+					</v8:item>
+				</lwsTitle>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>Вакансии.ГрафикРаботы.Имя</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>Вакансии.ГрафикРаботы.ID</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ID</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<placement>Auto</placement>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<use>false</use>
+			<field>Вакансии.Местоположение.Подробнее.Регион_1</field>
+			<title>Регион</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<use>false</use>
+			<field>Вакансии.Местоположение.Подробнее.Регион_2</field>
+			<title> </title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<use>false</use>
+			<field>Вакансии.Местоположение.Подробнее.Регион_3</field>
+			<title> </title>
+		</item>
+	</selection>
+	<filter>
+		<userSettingID>3917b2ac-9b0b-4edb-9142-ae1c8c876ecd</userSettingID>
+	</filter>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ПоискВакансий</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string"/>
+			<userSettingID>0f55249e-7bf8-4737-bace-a916f28dc894</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>ВалютаРубль</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string">"RUR"</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьЛоготип</dcscor:parameter>
+			<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ТокенДоступа</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string"/>
+			<userSettingID>4daf5ed1-313a-4bea-a171-12fa55f4ab6a</userSettingID>
 		</dcscor:item>
 	</dataParameters>
 	<order>
