@@ -420,13 +420,11 @@
 					</d5p1:item>
 				</title>
 				<useRestriction>
-					<field>true</field>
 					<condition>true</condition>
 					<group>true</group>
 					<order>true</order>
 				</useRestriction>
 				<attributeUseRestriction>
-					<field>true</field>
 					<condition>true</condition>
 					<group>true</group>
 					<order>true</order>
@@ -1248,6 +1246,21 @@
 					<AllowedLength>Variable</AllowedLength>
 				</StringQualifiers>
 			</valueType>
+		</calculatedField>
+		<calculatedField>
+			<dataPath>Вакансии.URL</dataPath>
+			<expression>"https://hh.ru/vacancy/" + Вакансии.ID</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Вакансии.URL</d4p1:content>
+				</d4p1:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
 		</calculatedField>
 		<totalField>
 			<dataPath>Вакансии.Зарплата.СредняяРуб</dataPath>
@@ -2661,12 +2674,7 @@
 	<userFields>
 		<item xsi:type="UserFieldExpression">
 			<dataPath>ПользовательскиеПоля.Поле1</dataPath>
-			<lwsTitle>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ЧетнаяСтрока</v8:content>
-				</v8:item>
-			</lwsTitle>
+			<title>ЧетнаяСтрока</title>
 			<detailExpression>Выбор
 	Когда СистемныеПоля.НомерПоПорядку / 2 = Цел(СистемныеПоля.НомерПоПорядку / 2)
 		Тогда Истина
@@ -2701,24 +2709,14 @@
 				<placement>Vertically</placement>
 			</item>
 			<item xsi:type="SelectedItemFolder">
-				<lwsTitle>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Название</v8:content>
-					</v8:item>
-				</lwsTitle>
+				<title>Название</title>
 				<item xsi:type="SelectedItemField">
 					<field>Вакансии.Заголовок</field>
 					<title>Заголовок</title>
 				</item>
 				<item xsi:type="SelectedItemField">
-					<field>Вакансии.ID</field>
-					<lwsTitle>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>На сайте</v8:content>
-						</v8:item>
-					</lwsTitle>
+					<field>Вакансии.URL</field>
+					<title>На сайте</title>
 				</item>
 				<placement>Vertically</placement>
 			</item>
@@ -2785,13 +2783,8 @@
 					<title>Адрес</title>
 				</item>
 				<item xsi:type="SelectedItemField">
-					<field>Вакансии.Работодатель.РаботодательID</field>
-					<lwsTitle>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>На сайте</v8:content>
-						</v8:item>
-					</lwsTitle>
+					<field>Вакансии.Работодатель.URL</field>
+					<title>На сайте</title>
 				</item>
 				<placement>Vertically</placement>
 			</item>
@@ -2838,61 +2831,31 @@
 			</item>
 			<item xsi:type="SelectedItemFolder">
 				<use>false</use>
-				<lwsTitle>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Тип занятости</v8:content>
-					</v8:item>
-				</lwsTitle>
+				<title>Тип занятости</title>
 				<item xsi:type="SelectedItemField">
 					<use>false</use>
 					<field>Вакансии.ТипЗанятости.Имя</field>
-					<lwsTitle>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ID</v8:content>
-						</v8:item>
-					</lwsTitle>
+					<title>ID</title>
 				</item>
 				<item xsi:type="SelectedItemField">
 					<use>false</use>
 					<field>Вакансии.ТипЗанятости.ID</field>
-					<lwsTitle>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Имя</v8:content>
-						</v8:item>
-					</lwsTitle>
+					<title>Имя</title>
 				</item>
 				<placement>Auto</placement>
 			</item>
 			<item xsi:type="SelectedItemFolder">
 				<use>false</use>
-				<lwsTitle>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>График работы</v8:content>
-					</v8:item>
-				</lwsTitle>
+				<title>График работы</title>
 				<item xsi:type="SelectedItemField">
 					<use>false</use>
 					<field>Вакансии.ГрафикРаботы.Имя</field>
-					<lwsTitle>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Имя</v8:content>
-						</v8:item>
-					</lwsTitle>
+					<title>Имя</title>
 				</item>
 				<item xsi:type="SelectedItemField">
 					<use>false</use>
 					<field>Вакансии.ГрафикРаботы.ID</field>
-					<lwsTitle>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ID</v8:content>
-						</v8:item>
-					</lwsTitle>
+					<title>ID</title>
 				</item>
 				<placement>Auto</placement>
 			</item>
@@ -3050,20 +3013,10 @@
 				</dcscor:item>
 				<dcscor:item xsi:type="SettingsParameterValue">
 					<dcscor:parameter>Текст</dcscor:parameter>
-					<dcscor:value xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;перейти&gt;</v8:content>
-						</v8:item>
-					</dcscor:value>
+					<dcscor:value xsi:type="xs:string">&lt;перейти&gt;</dcscor:value>
 				</dcscor:item>
 			</appearance>
-			<presentation xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Ссылки для перехода</v8:content>
-				</v8:item>
-			</presentation>
+			<presentation xsi:type="xs:string">Ссылки для перехода</presentation>
 		</item>
 		<item>
 			<selection>
@@ -3084,20 +3037,10 @@
 				</dcscor:item>
 				<dcscor:item xsi:type="SettingsParameterValue">
 					<dcscor:parameter>Текст</dcscor:parameter>
-					<dcscor:value xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;не указана&gt;</v8:content>
-						</v8:item>
-					</dcscor:value>
+					<dcscor:value xsi:type="xs:string">&lt;не указана&gt;</dcscor:value>
 				</dcscor:item>
 			</appearance>
-			<presentation xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Пустая валюта</v8:content>
-				</v8:item>
-			</presentation>
+			<presentation xsi:type="xs:string">Пустая валюта</presentation>
 		</item>
 		<item>
 			<selection>
@@ -3109,20 +3052,10 @@
 			<appearance>
 				<dcscor:item xsi:type="SettingsParameterValue">
 					<dcscor:parameter>Текст</dcscor:parameter>
-					<dcscor:value xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>RUR</v8:content>
-						</v8:item>
-					</dcscor:value>
+					<dcscor:value xsi:type="xs:string">RUR</dcscor:value>
 				</dcscor:item>
 			</appearance>
-			<presentation xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Валюта Рубль</v8:content>
-				</v8:item>
-			</presentation>
+			<presentation xsi:type="xs:string">Валюта Рубль</presentation>
 		</item>
 		<item>
 			<selection>
@@ -3161,12 +3094,7 @@
 					<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 				</dcscor:item>
 			</appearance>
-			<presentation xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Выделенные поля</v8:content>
-				</v8:item>
-			</presentation>
+			<presentation xsi:type="xs:string">Выделенные поля</presentation>
 		</item>
 		<item>
 			<selection/>
@@ -3248,6 +3176,13 @@
 		<selection>
 			<item xsi:type="SelectedItemAuto"/>
 		</selection>
+		<outputParameters>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Заголовок</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType"/>
+			</dcscor:item>
+		</outputParameters>
 		<item xsi:type="StructureItemGroup">
 			<groupItems>
 				<item xsi:type="GroupItemField">
